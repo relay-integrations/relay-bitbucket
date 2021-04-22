@@ -1,0 +1,23 @@
+apiVersion: integration/v1
+kind: Trigger
+name: bitbucket-trigger-event-fired
+version: 1
+summary: Bitbucket event fired
+
+description: |
+  This trigger takes in the contents of a Bitbucket event and presents it as an output event
+
+responders:
+- webhook
+
+schemas:
+  event:
+    source: file
+    file: event.schema.json
+
+build:
+  apiVersion: build/v1
+  kind: Docker
+
+publish:
+  repository: relaysh/bitbucket-trigger-event-fired

@@ -1,0 +1,23 @@
+apiVersion: integration/v1
+kind: Integration
+name: bitbucket
+channel: alpha
+version: v20200515
+summary: Bitbucket
+license: Apache-2.0
+homepage: https://github.com/relay-integrations/relay-bitbucket
+source: https://github.com/relay-integrations/relay-bitbucket
+
+description: |
+  Bitbucket is a Git-based source code repository hosting service owned by Atlassian.
+
+owner:
+  name: Puppet, Inc.
+  email: relay@puppet.com
+  url: https://puppet.com
+
+tags:
+  - source control
+  - git
+  - bitbucket
+  - relay integration
