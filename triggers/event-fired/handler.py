@@ -15,7 +15,7 @@ async def handler():
     bitbucket_event = request.headers.get('X-Event-Key')
 
     if bitbucket_event is None:
-        return {'message': 'not a valid GitHub event'}, 400, {}
+        return {'message': 'not a valid Bitbucket event'}, 400, {}
     if bitbucket_event == 'ping':
         return {'message': 'success'}, 200, {}
 
