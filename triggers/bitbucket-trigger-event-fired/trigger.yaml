@@ -21,3 +21,16 @@ build:
 
 publish:
   repository: relaysh/bitbucket-trigger-event-fired
+
+examples:
+- summary: When a Bitbucket event is fired
+  content:
+    apiVersion: v1
+    kind: Trigger
+    name: bitbucket-event
+    source:
+      type: webhook
+      image: relaysh/bitbucket-trigger-event-fired
+    binding:
+      parameters:
+        event_payload: !Data event_payload
